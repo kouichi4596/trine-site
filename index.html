@@ -82,6 +82,9 @@
 <!-- school contents index -->
 <section class="panel band-line section">
   <div class="container">
+    <div class="course-toplink reveal">
+      <a href="about.html" class="btn btn-ghost">トリンについて ／ スクールの運営方針</a>
+    </div>
     <div class="sec-head-row reveal">
       <div>
         <div class="idx"><span class="idx-n">01</span><span class="idx-rule"></span><span class="idx-l">School</span></div>
@@ -119,11 +122,45 @@
   </div>
 </section>
 
+<!-- schedule -->
+<section class="section panel band-line">
+  <div class="container">
+    <div class="schedule-head reveal">
+      <div>
+        <div class="idx"><span class="idx-n">03</span><span class="idx-rule"></span><span class="idx-l">Schedule</span></div>
+        <h2 class="sec-title">占い鑑定スケジュール</h2>
+        <p class="schedule-note">ローズベル・ミリオン 鑑定可能時間（<b>6月末まで</b>・7月以降はお電話でお問い合わせください）<br />予定をクリックすると、何時から何時までの鑑定が可能か確認できます。</p>
+      </div>
+      <a href="fortune.html#reserve" class="link-line">鑑定の詳細・料金　→</a>
+    </div>
+    <div class="cal-wrap reveal">
+      <div class="tcal-top">
+        <div class="tcal-nav">
+          <button type="button" class="tcal-arw" id="calPrev" aria-label="前の月">‹</button>
+          <div class="tcal-month" id="calMonth">2026年 <span>6月</span></div>
+          <button type="button" class="tcal-arw" id="calNext" aria-label="次の月">›</button>
+        </div>
+        <div class="tcal-legend">
+          <span class="lg"><span class="dot dot-rose"></span>ローズベル</span>
+          <span class="lg"><span class="dot dot-mil"></span>ミリオン</span>
+        </div>
+      </div>
+      <div class="tcal-scroll"><div class="tcal-grid" id="trineCal"></div></div>
+      <div class="tcal-detail" id="trineCalDetail"></div>
+      <p class="tcal-foot">※ 予定の時間は鑑定スタート可能時刻です。「〜17:30」の場合、最終17:30から最大60分の鑑定予約が可能です。</p>
+    </div>
+    <div class="schedule-foot reveal">
+      <a href="fortune.html#reserve" class="btn btn-gold">「占い鑑定お申し込みフォーム」はこちら</a>
+      <span class="tel">前日・当日のお申し込みは、お電話 <b>06-6575-7977</b> まで</span>
+    </div>
+  </div>
+</section>
+
 <!-- news -->
 <section class="section">
   <div class="container">
     <div class="sec-head-row reveal">
-      <div class="idx"><span class="idx-n">03</span><span class="idx-rule"></span><span class="idx-l">News</span></div>
+      <div class="idx"><span class="idx-n">04</span><span class="idx-rule"></span><span class="idx-l">News</span></div>
       <a href="#" class="link-line">ALL NEWS　→</a>
     </div>
     <div class="news-grid reveal">
@@ -176,6 +213,25 @@
 </footer>
 
 <div id="tweaks-root"></div>
+
+<!-- booking confirm modal -->
+<div class="book-modal" id="bookModal" hidden>
+  <div class="book-backdrop" data-close></div>
+  <div class="book-card" role="dialog" aria-modal="true" aria-labelledby="bookWhen">
+    <button class="book-x" data-close aria-label="閉じる">×</button>
+    <div class="book-eyebrow">この日時で申し込む</div>
+    <div class="book-when" id="bookWhen"></div>
+    <div class="book-who" id="bookWho"></div>
+    <p class="book-note">下のいずれかの方法でお申し込みください。担当者より折り返しご連絡し、鑑定時間（最大60分）を確定いたします。</p>
+    <div class="book-actions">
+      <a class="btn btn-gold" id="bookLine" href="#" target="_blank" rel="noopener">LINEで申し込む</a>
+      <a class="btn btn-ghost" id="bookTel" href="tel:0665757977">お電話で申し込む　06-6575-7977</a>
+      <a class="btn btn-ghost" id="bookMail" href="#">メールで申し込む</a>
+    </div>
+    <a class="book-form-link" href="fortune.html#reserve">詳しい申込みフォームを使う　→</a>
+  </div>
+</div>
+
 
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
